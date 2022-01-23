@@ -1,0 +1,164 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+html {
+	font-size: 20px;
+}
+
+body {
+	background-color: black;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h2 {
+	color: #f8f8f8;
+	text-align: center;
+	padding: 40px;
+	font-size: 2.5rem;
+}
+
+.scoreboard {
+	display: flex;
+	justify-content: center;
+}
+
+.scoreboard > div {
+	min-width: 200px;
+	min-height: 50px;
+	border: 2.5px solid white;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.scoreboard > div > div {
+	color: white;
+	margin: 5px;
+	font-size: 1.25rem;
+}
+
+.hands {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	padding-top: 33px;
+	margin: 15px;
+}
+
+
+.hands > div {
+	max-width: 25vh;	
+}
+
+
+
+.right-hand-animate {
+	animation-name: right-hand-movement;
+	animation-iteration-count: 3;
+	animation-duration: 0.66s;
+}
+
+.left-hand-animate {
+	animation-name: left-hand-movement;
+	animation-iteration-count: 3;
+	animation-duration: 0.66s;
+}
+
+
+.hands > div > img {
+	width: 100%;
+}
+
+
+.player-choice {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	padding-top: 2rem;
+}
+
+.player-choice > div {
+	max-width: 12vh;
+	padding: 10px;
+}
+
+.player-choice > div > img {
+	width: 100%;
+}
+
+.player-choice > div:hover {
+	transform: scale(1.5);
+}
+
+
+.round-winner {
+	display: flex;
+	justify-content: center;
+	font-size: 1.25rem;
+	padding: 25px;
+	color: white;
+}
+
+.winner {
+	color: white;
+}
+
+.winner > p {
+	text-align: center;
+	font-size: 1.5rem;
+}
+
+
+@media only screen and (max-width: 400px) {
+  .player-choice {
+  	flex-direction: column;
+  	justify-content: center;
+  	align-items: center;
+  }
+}
+
+footer {
+	padding: 25px;
+	font-size: 0.8rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+footer {
+	color: white;
+}
+
+@keyframes left-hand-movement {
+	0% {
+		transform: rotateZ(0deg);
+	}
+
+	75% {
+		transform: rotateZ(45deg);
+	}
+
+	100% {
+		transform: rotateZ(0deg);
+	}
+}
+
+
+@keyframes right-hand-movement {
+	0% {
+		transform: rotateZ(0deg);
+	}
+
+	75% {
+		transform: rotateZ(-45deg);
+	}
+
+	100% {
+		transform: rotateZ(0deg);
+	}
+}
